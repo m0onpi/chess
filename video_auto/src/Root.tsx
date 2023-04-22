@@ -2,7 +2,10 @@ import {Composition} from 'remotion';
 import { Background } from './Background';
 
 // Each <Composition> is an entry in the sidebar!
-
+const info = require(`../public/myfile.json`)
+const first = info.brilliant_pos[0] -1
+const last = info.moves.length 
+const N = last - first
 export const RemotionRoot: React.FC = () => {
 	return (
 		<>
@@ -11,7 +14,7 @@ export const RemotionRoot: React.FC = () => {
 				// npx remotion render src/index.ts <id> out/video.mp4
 				id="HelloWorld"
 				component={Background}
-				durationInFrames={20 * 30}
+				durationInFrames={(N + 12) * 30}
 				fps={30}
 				width={1080}
 				height={1920}
