@@ -20,8 +20,8 @@ async def get_moves():
    await page.setViewport({"width": 1920, "height": 1080})
    await page.goto('https://www.chess.com/login_and_go?returnUrl=https://www.chess.com/', {"fullPage": True,"waitUntil": 'networkidle2'})  
    
-   await page.type('#username','rooksacker123')
-   await page.type('#password','Thisischessbot123')
+   await page.type('#username','username')
+   await page.type('#password','password')
    await page.click('#login')
    await page.setViewport({"width": 1920, "height": 1080})
    await page.goto(gameLink,{"fullPage": True,"waitUntil": 'networkidle2'})
